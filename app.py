@@ -241,7 +241,7 @@ def how_many_times_your_heart_has_beat():
         return render_template('how-many-times-your-heart-has-beaten.html', output=output,day =day, month=month, year=year)
     except:
         return render_template('how-many-times-your-heart-has-beaten.html', day=day, month=month, year=year, message='* An error occured, make sure that the date you have inputted actually exists! *')
-@app.route('/sitemap)
+@app.route('/sitemap')
 def sitemap():
     return render_template('sitemap.xml')
 if __name__ == "__main__":
