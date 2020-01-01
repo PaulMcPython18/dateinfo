@@ -84,8 +84,7 @@ def how_many_days_have_i_lived():
         if len(month) > 2:
             return render_template('what-day-of-the-week-was-i-born.html', message="* Length of month/day must be less than 3 *")
         month = int(month)
-        if int(month) > 12:
-            return render_template('how-many-minutes-have-i-been-alive.html', message"* Try again! Maybe the month you inputted does not exist! *")
+        
     except:
         return render_template('what-day-of-the-week-was-i-born.html', message="* Do not input words *")
     year = request.form['namequery3']
@@ -131,8 +130,7 @@ def how_many_minutes_have_i_lived():
         if len(month) > 2:
             return render_template('how-many-minutes-have-i-been-alive.html', message="* Length of month/day must be less than 3 *")
         month = int(month)
-        if int(month) > 12:
-            return render_template('how-many-minutes-have-i-been-alive.html', message"* Try again! Maybe the month you inputted does not exist! *")
+        
     except:
         return render_template('how-many-minutes-have-i-been-alive.html', message="* Do not input words *")
     year = request.form['namequery3']
@@ -179,8 +177,6 @@ def how_many_seconds_have_i_lived():
         if len(month) > 2:
             return render_template('how-many-seconds-have-i-been-alive.html', message="* Length of month/day must be less than 3 *")
         month = int(month)
-        if int(month) > 12:
-            return render_template('how-many-minutes-have-i-been-alive.html', message"* Try again! Maybe the month you inputted does not exist! *")
     except:
         return render_template('how-many-seconds-have-i-been-alive.html', message="* Do not input words *")
     year = request.form['namequery3']
