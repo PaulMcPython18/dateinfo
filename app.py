@@ -144,16 +144,16 @@ def how_many_minutes_have_i_lived():
     print(day)
     print(month)
     print(year)
-    # try:
-    today = datetime.date.today()
-    bday = datetime.date(year, month, day)
-    output = today-bday
-    output = output.days
-    output = output * 1440
-    output = str(output) + " minutes!"
-    return render_template('how-many-minutes-have-i-been-alive.html', output=output,day =day, month=month, year=year)
-    # except:
-    #     return render_template('how-many-minutes-have-i-been-alive.html', message='* An error occured! Make sure that you have not inputted a non-existant month, day or year number! *', day = day, month=month, year=year)
+    try:
+        today = datetime.date.today()
+        bday = datetime.date(year, month, day)
+        output = today-bday
+        output = output.days
+        output = output * 1440
+        output = str(output) + " minutes!"
+        return render_template('how-many-minutes-have-i-been-alive.html', output=output,day =day, month=month, year=year)
+    except:
+         return render_template('how-many-minutes-have-i-been-alive.html', message='* An error occured! Make sure that you have not inputted a non-existant month, day or year number! *', day = day, month=month, year=year)
 @app.route('/how-many-seconds-have-i-been-alive')
 def how_many_seconds_have_i_been_alive():
     return render_template('how-many-seconds-have-i-been-alive.html')
