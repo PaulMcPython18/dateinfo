@@ -19,7 +19,7 @@
     <div class="container" style="margin-top: 2em;">
       <div class="jumbotron">
 
-          <h1 class="display-3" style="font-size: 45px;">Use our calculator to find out how many minutes you have lived in your life.</h1>
+          <h1 class="display-3" style="font-size: 45px;">How many minutes have I been alive? Use our calculator to find out how many minutes you have lived in your life.</h1>
             <hr>
           <p>Our users are provided with the tools and calculators needed to empower themselves. Our tools are meant to be user friendly and help those in need of information. Thank you for discovering us!</p>
 <hr>
@@ -29,6 +29,7 @@
             <center><p style="font-size: 40px;"> &#8601;</p></center>
             <hr>
             <form method="POST" action="/how-many-minutes-have-i-been-alive">
+                <p> Follow the directions below to find out how many minutes you have been alive. </p>
                 <p> Please enter your birthday below: &darr; </p>
                     <p style="color: red;"> {{ message }}</p>
                     <p>Day <b>(Ex: 03)</b>  &darr;</p><input type="text" name="namequery1" value='{{ day }}'>
