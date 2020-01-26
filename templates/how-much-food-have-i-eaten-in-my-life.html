@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Find out how much food you have eaten in your life with our calculator. Input your birthday and be shocked with how much food you have eaten!">
+    <title>How much food have I eaten in my life Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<style>
+
+</style>
+<body style="background-color: #d9e6f2">
+{% include '_navbar.html' %}
+
+    <main role="main">
+    <div class="container" style="margin-top: 2em;">
+      <div class="jumbotron">
+
+          <h1 class="display-3" style="font-size: 45px;">How much food you have eaten in your life Calculator</h1>
+           <hr>
+            <p><a class="btn btn-primary btn-lg" href="/" role="button">Go Home&raquo;</a></p>
+            <hr>
+            <center><h1 class="display-3" style="font-size: 30px; margin-top: 1.5em; margin-bottom: 1.5em;"> Use the calculator below to how much food you have eaten in your life!</h1></center>
+            <center><p style="font-size: 40px;"> &#8601;</p></center>
+            <hr>
+            <form method="POST" action="/how-much-food-have-i-eaten-in-my-life-calculator">
+                <p> Please enter your birthday below: &darr; </p>
+                    <p style="color: red;"> {{ message }}</p>
+                    <p>Day <b>(Ex: 03)</b>  &darr;</p><input type="text" name="date1" value='{{ day }}'>
+          <div></div>
+                    <p>Month <b>(Ex: 05)</b>  &darr;</p><input type="text" name="date2" value='{{ month }}'>
+          <div></div>
+                    <p>Year <b>(Ex: 2020)</b>  &darr;</p><input type="text" name="date3" value='{{ year }}'>
+          <div></div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 2em;">Submit Parameters</button>
+                <hr>
+                <p> Based upon given information, your have eaten about: &darr;</p>
+                <b><input type="text" name="date4" value="{{ difference }}"></b>
+                <p style="margin-top: 1em;"> <b>Fact:</b> Most people eat about 3-5 pounds of food everyday!</p>
+                <hr>
+                <p> Want to figure out the day of the week you were born? &darr; </p>
+                <p><a class="btn btn-secondary" href="/what-day-of-the-week-am-i-born" role="button" style="margin-top: 0em; width: 20%;">Lets find out! &raquo;</a></p>
+
+    </form>
+
+        </div>
+      </div>
+
+
+    </main>
+
+
+    <footer class="container">
+      <p>Feel free to take inspiration from these tools. Have a good day.</p>
+    </footer>
+
+
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>-->
+<!--    <script src="../../assets/js/vendor/popper.min.js"></script>-->
+<!--    <script src="../../dist/js/bootstrap.min.js"></script>-->
+  </body>
+</html>
