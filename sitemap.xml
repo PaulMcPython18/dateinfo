@@ -18,6 +18,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://dateinfo.herokuapp.com/how-much-food-have-i-eaten-in-my-life-calculator</loc>
+  <lastmod>2020-01-01T05:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>      
+<url>
   <loc>https://dateinfo.herokuapp.com/what-day-of-the-week-am-i-born</loc>
   <lastmod>2020-01-01T05:54:44+00:00</lastmod>
   <priority>0.80</priority>
