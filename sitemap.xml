@@ -43,6 +43,21 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://dateinfo.herokuapp.com/how-much-food-does-a-horse-eat-in-its-lifetime</loc>
+  <lastmod>2020-01-01T05:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dateinfo.herokuapp.com/how-many-pounds-of-food-does-a-dog-eat-in-its-life</loc>
+  <lastmod>2020-01-01T05:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dateinfo.herokuapp.com/how-much-food-does-a-cat-eat-in-its-lifetime</loc>
+  <lastmod>2020-01-01T05:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>       
+<url>
   <loc>https://dateinfo.herokuapp.com/how-many-times-your-heart-has-beaten</loc>
   <lastmod>2020-01-01T05:54:44+00:00</lastmod>
   <priority>0.80</priority>
