@@ -393,7 +393,7 @@ def howmuchfooddoesacateatinitslifetime2():
     print(catdiff)
     catdiff = str(catdiff)
     finalcatdiff = ""
-    for char5 in catdiff():
+    for char5 in catdiff:
         if char5 == " ":
             break
         finalcatdiff += char5
