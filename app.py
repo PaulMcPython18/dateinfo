@@ -323,6 +323,82 @@ def routeit2():
         return render_template('how-much-food-have-i-eaten-in-my-life.html', difference = difference, day = date1, month = date2, year = date3)
     else:
         return render_template('how-much-food-have-i-eaten-in-my-life.html', message='Whoops! Make sure the date you entered actually exists!')
+@app.route('/how-many-pounds-of-food-does-a-dog-eat-in-its-life')
+def howmanypoundsoffooddoesadogeatinitslifetime():
+    return render_template('howmanypoundsoffooddoesadogeatinitslife.html')
+@app.route('/how-many-pounds-of-food-does-a-dog-eat-in-its-life', methods=['POST'])
+def howmanypoundsoffooddoesadogeatinitslifetime2():
+    try:
+        dogday = request.form['date1']
+        dogmonth = request.form['date2']
+        dogyear = request.form['date3']
+        if len(dogday) > 10 or len(dogmonth) > 10 or len(dogyear) > 10:
+            return render_template('howmanypoundsoffooddoesadogeatinitslife.html',
+                               message='Whoops! You entered a date that does not exist!')
+        difference = datetime.date.today() - datetime.date(int(dogyear), int(dogmonth), int(dogday))
+        difference = str(difference)
+        print(difference)
+        final_difference = ""
+        for char2 in difference:
+            if char2 == " ":
+                break
+            final_difference += char2
+        if int(final_difference) >= 35:
+            alternative_suprise = "Woah! This dog has lived for a long time!"
+        final_difference = int(final_difference) * 2
+        final_difference = str(final_difference) + " food pounds"
+        print(final_difference)
+        return render_template('howmanypoundsoffooddoesadogeatinitslife.html', difference2 = final_difference, day = dogday, month = dogmonth, year = dogyear, alternative_suprise = alternative_suprise)
+    except:
+        return render_template('howmanypoundsoffooddoesadogeatinitslife.html', usermessage = "The date you inputted is either invalid or does not exist. Sorry!")
+@app.route('/how-much-food-does-a-horse-eat-in-its-lifetime')
+def howmuchfooddoesahorseeatinitslifetime():
+    return render_template('howmanypoundsoffooddoesahorseeatinitslifetimecalculator.html')
+@app.route('/how-much-food-does-a-horse-eat-in-its-lifetime', methods=['POST'])
+def howmuchfooddoesahorseeatinitslifetime2():
+    if 1 == 1:
+        horseday = request.form['date1']
+        horsemonth = request.form['date2']
+        horseyear = request.form['date3']
+        if len(horseday) > 10 or len(horsemonth) > 10 or len(horseyear) > 10:
+            return render_template('howmanypoundsoffooddoesahorseeatinitslifetimecalculator.html',
+                                   usermessage='Whoops! You entered a date that does not exist!')
+        horsediff = datetime.date.today() - datetime.date(int(horseyear), int(horsemonth), int(horseday))
+        horsefinaldiff = ""
+        for char3 in str(horsediff):
+            if char3 == " ":
+                break
+            horsefinaldiff += char3
+        if int(horsefinaldiff) > 7000:
+            funny_message = "Woah! That horse is old! Scroll down for more information!"
+        else:
+            funny_message = ""
+        horsefinaldiff = int(horsefinaldiff) * 16
+        return render_template('howmanypoundsoffooddoesahorseeatinitslifetimecalculator.html', final_result = str(horsefinaldiff) + " food pounds!", day = horseday, month = horsemonth, year = horseyear, alternative_suprise = funny_message)
+    else:
+        return render_template('howmanypoundsoffooddoesahorseeatinitslifetimecalculator.html',
+                        usermessage='Whoops! You entered a date that does not exist!')
+@app.route('/how-much-food-does-a-cat-eat-in-its-lifetime')
+def howmuchfooddoesacateatinitslifetime():
+    return render_template('howmanypoundsoffooddoesacateatinitslifetime.html')
+@app.route('/how-much-food-does-a-cat-eat-in-its-lifetime', methods=['POST'])
+def howmuchfooddoesacateatinitslifetime2():
+    catday = request.form['date1']
+    catmonth = request.form['date2']
+    catyear = request.form['date3']
+    if len(catmonth) > 10 or len(catday) > 10 or len(catyear) > 10:
+        return render_template('howmanypoundsoffooddoesacateatinitslifetime.html',
+                               usermessage='Whoops! You entered a date that does not exist!')
+    catdiff = datetime.date.today() - datetime.date(int(catyear), int(catmonth), int(catday))
+    print(catdiff)
+    catdiff = str(catdiff)
+    finalcatdiff = ""
+    for char5 in catdiff():
+        if char5 == " ":
+            break
+        finalcatdiff += char5
+    finalcatdiff = str(finalcatdiff) + " food pounds!"
+    return render_template('howmanypoundsoffooddoesacateatinitslifetime.html', day = catday, month= catmonth, year = catyear, final_result = finalcatdiff)
 @app.route('/sitemap')
 def sitemap():
     return render_template('sitemap.xml')
