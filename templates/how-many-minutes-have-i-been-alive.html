@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Use Date-Info's tools to determine how many minutes you have lived, or what day of the week a day is given the date. Check us out to view more of our tools!">
-    <title>How many minutes have I been alive? - Date Info</title>
+    <meta name="description" content="Determine how many seconds you have been alive with this DateInfo Calculator!">
+    <title>Determine how many minutes you have been alive</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 </head>
@@ -19,7 +19,7 @@
     <div class="container" style="margin-top: 2em;">
       <div class="jumbotron">
 
-          <h1 class="display-3" style="font-size: 45px;">How many minutes have I been alive? Use our calculator to find out how many minutes you have lived in your life.</h1>
+          <h1 class="display-3" style="font-size: 45px;">Use our calculator to find out how many minutes you have lived in your life.</h1>
             <hr>
           <p>Our users are provided with the tools and calculators needed to empower themselves. Our tools are meant to be user friendly and help those in need of information. Thank you for discovering us!</p>
 <hr>
@@ -29,7 +29,6 @@
             <center><p style="font-size: 40px;"> &#8601;</p></center>
             <hr>
             <form method="POST" action="/how-many-minutes-have-i-been-alive">
-                <p> Follow the directions below to find out how many minutes you have been alive. </p>
                 <p> Please enter your birthday below: &darr; </p>
                     <p style="color: red;"> {{ message }}</p>
                     <p>Day <b>(Ex: 03)</b>  &darr;</p><input type="text" name="namequery1" value='{{ day }}'>
@@ -57,6 +56,9 @@
     </footer>
 
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
   </body>
 </html>
